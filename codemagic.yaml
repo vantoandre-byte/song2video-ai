@@ -4,11 +4,8 @@ workflows:
     max_build_duration: 60
     environment:
       flutter: stable
-      
-  
-  
     scripts:
-      -  name: Generate missing native project files
+      - name: Generate missing native project files
         script: |
           if [ ! -d "android" ]; then
             flutter create --platforms=android --org com.song2video.ai .
@@ -20,12 +17,10 @@ workflows:
     id("com.google.gms.google-services") version "4.4.2" apply false' android/settings.gradle.kts
           sed -i '' '/id("kotlin-android")/a\
     id("com.google.gms.google-services")' android/app/build.gradle.kts
-           
-      
       - name: Get Flutter packages
         script: |
           flutter pub get
-      - name: Build APK (debug, unsigned — fine for sideloading/testing)
+      - name: Build APK (debug, unsigned)
         script: |
           flutter build apk --debug
     artifacts:
