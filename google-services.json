@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "597612192038",
+    "project_id": "song2video-ai",
+    "storage_bucket": "song2video-ai.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:597612192038:android:ffd2cecc2eedb73b2761e7",
+        "android_client_info": {
+          "package_name": "com.song2video.ai.song2video_ai"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCFkprjlNGNySJ1AszDUI8zAIhVcsVRM9s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
