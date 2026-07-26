@@ -3,7 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'core/theme/app_theme.dart';
-import 'screens/splash/splash_screen.dart';
+import 'screens/home/home_screen.dart';
 import 'firebase_options.dart';
 
 Future<void> main() async {
@@ -26,7 +26,7 @@ class Song2VideoApp extends StatelessWidget {
       theme: AppTheme.light,
       darkTheme: AppTheme.dark,
       themeMode: ThemeMode.dark,
-      home: const SplashScreen(),
+      home: const HomeScreen(),
     );
   }
 }
