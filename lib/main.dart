@@ -13,7 +13,7 @@ Future<void> main() async {
 
   // Loads provider API keys / config that shouldn't be committed to source
   // control. Copy .env.example to .env and fill in values before running.
-  await dotenv.load(fileName: '.env');
+
 
   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
   await Hive.initFlutter();
