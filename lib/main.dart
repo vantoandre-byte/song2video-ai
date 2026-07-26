@@ -11,8 +11,7 @@ import 'firebase_options.dart';
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
-  // Loads provider API keys / config that shouldn't be committed to source
-  // control. Copy .env.example to .env and fill in values before running.
+  
 
 
   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
