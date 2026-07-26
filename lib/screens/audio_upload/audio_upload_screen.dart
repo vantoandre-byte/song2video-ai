@@ -66,12 +66,11 @@ class _AudioUploadScreenState extends ConsumerState<AudioUploadScreen> {
                           const SizedBox(height: 8),
                           const Text('Detecting BPM, chorus, verses...', style: TextStyle(color: Colors.white60)),
                         ],
-          ),
-        ),
-      ),
-    );
-  }
-}
+                      ],
+                    ),
+                  ),
+                ),
+              ),
               if (analysis != null) ...[
                 const SizedBox(height: 24),
                 Text('Detected structure', style: Theme.of(context).textTheme.titleMedium),
@@ -87,7 +86,7 @@ class _AudioUploadScreenState extends ConsumerState<AudioUploadScreen> {
                       .toList(),
                 ),
               ],
-              const Spacer(),
+              const SizedBox(height: 24),
               ElevatedButton.icon(
                 icon: const Icon(Icons.auto_awesome),
                 label: const Text('Generate Scenes'),
@@ -111,6 +110,7 @@ class _AudioUploadScreenState extends ConsumerState<AudioUploadScreen> {
                 },
                 child: const Text('Skip — use Image Mode instead'),
               ),
+              const SizedBox(height: 24),
             ],
           ),
         ),
