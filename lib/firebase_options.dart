@@ -1,11 +1,6 @@
-// Placeholder Firebase options file.
-//
-// Generate the real version with the FlutterFire CLI:
-//   dart pub global activate flutterfire_cli
-//   flutterfire configure
-//
-// That command creates this file automatically, wired to your actual
-// Firebase project (Android + iOS app IDs, API keys, etc).
+// Auto-generated from google-services.json for the song2video-ai
+// Firebase project. iOS values are placeholders until an iOS app is
+// registered in Firebase.
 
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/foundation.dart' show defaultTargetPlatform, TargetPlatform;
@@ -23,19 +18,19 @@ class DefaultFirebaseOptions {
   }
 
   static const android = FirebaseOptions(
-    apiKey: 'REPLACE_WITH_FLUTTERFIRE_CONFIGURE_OUTPUT',
-    appId: 'REPLACE_WITH_FLUTTERFIRE_CONFIGURE_OUTPUT',
-    messagingSenderId: 'REPLACE_WITH_FLUTTERFIRE_CONFIGURE_OUTPUT',
-    projectId: 'REPLACE_WITH_FLUTTERFIRE_CONFIGURE_OUTPUT',
-    storageBucket: 'REPLACE_WITH_FLUTTERFIRE_CONFIGURE_OUTPUT',
+    apiKey: 'AIzaSyCFkprjlNGNySJ1AszDUI8zAIhVcsVRM9s',
+    appId: '1:597612192038:android:ffd2cecc2eedb73b2761e7',
+    messagingSenderId: '597612192038',
+    projectId: 'song2video-ai',
+    storageBucket: 'song2video-ai.firebasestorage.app',
   );
 
   static const ios = FirebaseOptions(
-    apiKey: 'REPLACE_WITH_FLUTTERFIRE_CONFIGURE_OUTPUT',
-    appId: 'REPLACE_WITH_FLUTTERFIRE_CONFIGURE_OUTPUT',
-    messagingSenderId: 'REPLACE_WITH_FLUTTERFIRE_CONFIGURE_OUTPUT',
-    projectId: 'REPLACE_WITH_FLUTTERFIRE_CONFIGURE_OUTPUT',
-    storageBucket: 'REPLACE_WITH_FLUTTERFIRE_CONFIGURE_OUTPUT',
-    iosBundleId: 'REPLACE_WITH_FLUTTERFIRE_CONFIGURE_OUTPUT',
+    apiKey: 'REPLACE_WHEN_IOS_APP_REGISTERED',
+    appId: 'REPLACE_WHEN_IOS_APP_REGISTERED',
+    messagingSenderId: '597612192038',
+    projectId: 'song2video-ai',
+    storageBucket: 'song2video-ai.firebasestorage.app',
+    iosBundleId: 'REPLACE_WHEN_IOS_APP_REGISTERED',
   );
 }
