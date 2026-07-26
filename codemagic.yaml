@@ -10,12 +10,12 @@ workflows:
     scripts:
       - name: Generate missing native project files
         script: |
-          # This project was hand-authored without running `flutter create`,
-          # so the android/ios/ platform folders don't exist yet.
-          # This regenerates them in place without touching lib/ or pubspec.yaml.
           if [ ! -d "android" ]; then
             flutter create --platforms=android --org com.song2video.ai .
           fi
+          sed -i 's/compileSdk = flutter.compileSdkVersion/compileSdk = 36/' android/app/build.gradle.kts
+          sed -i 's/targetSdk = flutter.targetSdkVersion/targetSdk = 36/' android/app/build.gradle.kts 
+      
       - name: Get Flutter packages
         script: |
           flutter pub get
