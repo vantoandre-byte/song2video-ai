@@ -8,13 +8,18 @@ workflows:
   
   
     scripts:
-      - name: Generate missing native project files
+      -  name: Generate missing native project files
         script: |
           if [ ! -d "android" ]; then
             flutter create --platforms=android --org com.song2video.ai .
           fi
           sed -i '' 's/compileSdk = flutter.compileSdkVersion/compileSdk = 36/' android/app/build.gradle.kts
           sed -i '' 's/targetSdk = flutter.targetSdkVersion/targetSdk = 36/' android/app/build.gradle.kts
+          cp google-services.json android/app/google-services.json
+          sed -i '' '/org.jetbrains.kotlin.android/a\
+    id("com.google.gms.google-services") version "4.4.2" apply false' android/settings.gradle.kts
+          sed -i '' '/id("kotlin-android")/a\
+    id("com.google.gms.google-services")' android/app/build.gradle.kts
            
       
       - name: Get Flutter packages
