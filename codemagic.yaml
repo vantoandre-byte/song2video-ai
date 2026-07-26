@@ -15,6 +15,10 @@ workflows:
           cp google-services.json android/app/google-services.json
           perl -i -pe 'print "    id(\"com.google.gms.google-services\") version \"4.4.2\" apply false\n" if /id\("org.jetbrains.kotlin.android"\)/' android/settings.gradle.kts
           perl -i -pe 'print "    id(\"com.google.gms.google-services\")\n" if /id\("kotlin-android"\)/' android/app/build.gradle.kts
+          echo "----- settings.gradle.kts -----"
+          cat android/settings.gradle.kts
+          echo "----- app/build.gradle.kts (top) -----"
+          head -30 android/app/build.gradle.kts
       - name: Get Flutter packages
         script: |
           flutter pub get
