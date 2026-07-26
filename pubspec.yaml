@@ -27,7 +27,7 @@ dependencies:
   # Audio handling / analysis
   just_audio: ^0.9.40
   audio_waveforms: ^1.1.0
-  file_picker: ^8.0.5
+  file_picker: ^10.1.2
 
   # Video
   video_player: ^2.9.1
