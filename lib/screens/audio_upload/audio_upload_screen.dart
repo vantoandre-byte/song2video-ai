@@ -40,7 +40,7 @@ class _AudioUploadScreenState extends ConsumerState<AudioUploadScreen> {
     return Scaffold(
       appBar: AppBar(title: const Text('Upload Audio')),
       body: SafeArea(
-        child: Padding(
+        child: SingleChildScrollView(
           padding: const EdgeInsets.all(20),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -66,11 +66,12 @@ class _AudioUploadScreenState extends ConsumerState<AudioUploadScreen> {
                           const SizedBox(height: 8),
                           const Text('Detecting BPM, chorus, verses...', style: TextStyle(color: Colors.white60)),
                         ],
-                      ],
-                    ),
-                  ),
-                ),
-              ),
+          ),
+        ),
+      ),
+    );
+  }
+}
               if (analysis != null) ...[
                 const SizedBox(height: 24),
                 Text('Detected structure', style: Theme.of(context).textTheme.titleMedium),
