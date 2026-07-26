@@ -1,0 +1,25 @@
+workflows:
+  android-build:
+    name: Song2Video AI - Android Build
+    max_build_duration: 60
+    environment:
+      flutter: stable
+      android_signing:
+        - keystore_reference_not_set  # remove this line if you hit an error; only needed for release signing
+    scripts:
+      - name: Generate missing native project files
+        script: |
+          # This project was hand-authored without running `flutter create`,
+          # so the android/ios/ platform folders don't exist yet.
+          # This regenerates them in place without touching lib/ or pubspec.yaml.
+          if [ ! -d "android" ]; then
+            flutter create --platforms=android --org com.song2video.ai .
+          fi
+      - name: Get Flutter packages
+        script: |
+          flutter pub get
+      - name: Build APK (debug, unsigned — fine for sideloading/testing)
+        script: |
+          flutter build apk --debug
+    artifacts:
+      - build/app/outputs/flutter-apk/*.apk
